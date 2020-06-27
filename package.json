@@ -14,7 +14,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Twitch bot",
+  "author": "whatsinmyopsec",
   "license": "ISC",
-  "description": ""
+  "description": "Twitch bot",
+  "repository": "https://github.com/whatsinmyopsec"
 }
