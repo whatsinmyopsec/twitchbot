@@ -24,30 +24,30 @@ client.on("message", (channel, tags, message, self, vips) => {
   if (message.toLowerCase() === "!me" && username === me) {
     client.say(channel, `!me`);
   }
-  if (message.toLowerCase() === "!!c" && username === me) {
-    client.say(channel, `beginbCube beginbCube beginbCube`);
-  }
-  if (message === "beginbCube") {
-    client.say(channel, `beginbCube beginbCube beginbCube`);
-  }
-  if (message.toLowerCase() === "!!veyes" && username === me) {
-    client.say(channel, `beginbVimeyes beginbVimeyes beginbVimeyes`);
-  }
-  if (message.toLowerCase() === "!!this" && username === me) {
-    client.say(channel, `beginbThis beginbThis beginbThis`);
-  }
-  if (message.includes("beginbVimeyes")) {
-    client.say(channel, `beginbVimeyes beginbVimeyes beginbVimeyes`);
-  }
-  if (message.includes("beginbThis")) {
-    client.say(channel, `beginbThis beginbThis beginbThis`);
-  }
+  // if (message.toLowerCase() === "!!c" && username === me) {
+  //   client.say(channel, `beginbCube beginbCube beginbCube`);
+  // }
+  // if (message === "beginbCube") {
+  //   client.say(channel, `beginbCube beginbCube beginbCube`);
+  // }
+  // if (message.toLowerCase() === "!!veyes" && username === me) {
+  //   client.say(channel, `beginbVimeyes beginbVimeyes beginbVimeyes`);
+  // }
+  // if (message.toLowerCase() === "!!this" && username === me) {
+  //   client.say(channel, `beginbThis beginbThis beginbThis`);
+  // }
+  // if (message.includes("beginbVimeyes")) {
+  //   client.say(channel, `beginbVimeyes beginbVimeyes beginbVimeyes`);
+  // }
+  // if (message.includes("beginbThis")) {
+  //   client.say(channel, `beginbThis beginbThis beginbThis`);
+  // }
   if (message.includes("LUL")) {
     client.say(channel, `LUL LUL LUL`);
   }
-  if (message.includes("beginbBill")) {
-    client.say(channel, `beginbBill beginbBill beginbBill`);
-  }
+  // if (message.includes("beginbBill")) {
+  //   client.say(channel, `beginbBill beginbBill beginbBill`);
+  // }
   if (message.includes("!!manifesto" && username === "beginbot")) {
     client.say(
       channel,

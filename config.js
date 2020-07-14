@@ -10,5 +10,5 @@ module.exports = {
     password: process.env.PASSWORD,
   },
 
-  channels: [process.env.CHANNEL0, process.env.CHANNEL1],
+  channels: [process.env.CHANNEL0, process.env.CHANNEL1, process.env.CHANNEL2],
 };
