@@ -1,6 +1,6 @@
 # Twitch bot
-#### For https://twitch.tv/beginbot
----
+## For https://twitch.tv/beginbot
+
 
 ### create .env 
 ---
@@ -12,7 +12,6 @@ CHANNEL1=second channel you want
 ```
 
 ## running
----
 
 ```
 npm i
