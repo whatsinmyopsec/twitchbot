@@ -2,8 +2,20 @@ const request = require("request");
 
 url = "http://127.0.0.1";
 
+let options = { json: true };
+
 const openPort = () => {
-	window.open("C:ProgramData/SteelSeries/SteelSeries Engine 3/coreProps.json");
+	fs.readFileSync(
+		"C:ProgramData/SteelSeries/SteelSeries Engine 3/coreProps.json"
+	);
+};
+
+var magic = {
+	uri = "http://127.0.0.1" + ":" + openPort,
+	method =  'POST',
+	json: {
+    "longUrl": "http://www.google.com/"
+}
 };
 
 const sendGenericEvent = (eventName, handlers, dataValue) => {
