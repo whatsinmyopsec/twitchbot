@@ -10,8 +10,14 @@ const me = "whatsinmyopsec";
 client.on("message", (channel, tags, message, self, vips) => {
 	mechannel = channel;
 	var { username, mod } = tags;
+	
+	if(tags = mod){
+	console.log(cc.red(`${username}:`) + cc.white(` ${message}`));
+	}
+	else
+	{
 	console.log(cc.green(`${username}:`) + cc.white(` ${message}`));
-	console.log(cc.red(`${mod}:`) + cc.white(` ${message}`));
+	}
 
 	if (self) return;
 	if (message === "CoolCat CoolCat CoolCat" && username === "beginbotbot") {
