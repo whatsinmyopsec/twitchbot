@@ -1,4 +1,5 @@
 # Twitch bot
+<img src="https://badges.pufler.dev/visits/whatsinmyopsec/twitchbot">
 #### For https://twitch.tv/beginbot
 ---
 
