@@ -1,5 +1,6 @@
 # Twitch bot
 <img src="https://badges.pufler.dev/visits/whatsinmyopsec/twitchbot">
+[![Run on Repl.it](https://repl.it/badge/github/whatsinmyopsec/twitchbot)](https://repl.it/github/whatsinmyopsec/twitchbot)
 #### For https://twitch.tv/beginbot
 ---
 
