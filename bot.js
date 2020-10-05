@@ -3,6 +3,7 @@ const feature = require("./criminal");
 //const screenoled = require("./screen");
 let readline = require("readline");
 const cc = require("cli-color");
+const keep_alive = require('./keep_alive.js');
 let mechannel = "";
 client.connect();
 
@@ -10,14 +11,17 @@ const me = "whatsinmyopsec";
 client.on("message", (channel, tags, message, self, vips) => {
 	mechannel = channel;
 	var { username, mod } = tags;
-	
 	if(tags = mod){
 	console.log(cc.red(`${username}:`) + cc.white(` ${message}`));
 	}
+  else if (username === me){
+    console.log(cc.yellow(`${username}:`) + cc.white(` ${message}`));
+  }
 	else
 	{
 	console.log(cc.green(`${username}:`) + cc.white(` ${message}`));
 	}
+  
 
 	if (self) return;
 	if (message === "CoolCat CoolCat CoolCat" && username === "beginbotbot") {
