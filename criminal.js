@@ -38,7 +38,7 @@ const feature = (client, channel) => {
 
 			client.say(
 				channel,
-				`User: ${worstCriminalName} with ${worstCrimeCount} crimes`
+				`Biggest Criminal User: ${worstCriminalName} with ${worstCrimeCount} crimes`
 			);
 		}
 	});
