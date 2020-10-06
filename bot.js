@@ -4,6 +4,7 @@ const feature = require("./criminal");
 let readline = require("readline");
 const cc = require("cli-color");
 const keep_alive = require('./keep_alive.js');
+const sudo = require('./sudo');
 let mechannel = "";
 client.connect();
 
@@ -66,7 +67,10 @@ client.on("message", (channel, tags, message, self, vips) => {
 	if (message.includes("!!worst_criminal")) {
 		feature(client, channel);
 	}
-	//	screenoled(channel);
+  if (message.includes("!!sudo getinfo")){
+    sudo(client, channel, message);
+  }
+	
 });
 
 const rl = readline.createInterface({
