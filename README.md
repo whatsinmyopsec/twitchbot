@@ -14,14 +14,16 @@ Little guide on how to make it work.
   
 2. Go to [tmi twitch site](https://twitchapps.com/tmi/).
 
-3. Copy from your Bot that Token and paste it into the "**Password**" variable.
+3. 3. Copy your Bot OAuth Token from twitch tmi [website](https://twitchapps.com/tmi/) and paste it into the "**Password**" variable.
+
+4. Make sure to install **npm** with these Commands:
 
 ### Example:
 ```md  
 USERNAME="Botname"  
 PASSWORD="NDgyMjM0ODU1MzQygG1xAM1Mzcw.W37ENQ.SxEyK0451hK-lMaYDT-wEHdc"  
-CHANNEL0="Welcome"  
-CHANNEL1="offtopic"
+CHANNEL0="Twitch channel name 1"  
+CHANNEL1="Twitch channel name 2"
 ```  
   
 4. Make sure to install **npm** with these Commands:
