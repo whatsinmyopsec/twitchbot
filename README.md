@@ -12,7 +12,7 @@ Little guide on how to make it work.
 
 1. Run this command `cp .env.example .env` or by simple rename that `.env.example` to `.env`
   
-  2. Go to [Discord Developers](https://discord.com/developers/applications) and open / create your Bot Application.
+2. Go to [tmi twitch site](https://twitchapps.com/tmi/).
 
 3. Copy from your Bot that Token and paste it into the "**Password**" variable.
 
