@@ -14,9 +14,7 @@ Little guide on how to make it work.
   
 2. Go to [tmi twitch site](https://twitchapps.com/tmi/).
 
-3. 3. Copy your Bot OAuth Token from twitch tmi [website](https://twitchapps.com/tmi/) and paste it into the "**Password**" variable.
-
-4. Make sure to install **npm** with these Commands:
+3. Copy your Bot OAuth Token from twitch tmi [website](https://twitchapps.com/tmi/) and paste it into the "**Password**" variable.
 
 ### Example:
 ```md  
