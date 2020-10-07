@@ -8,7 +8,7 @@
 
 ### create .env 
 ---
-```
+```md
 USERNAME=botname
 PASSWORD=oauth from twitch tmi
 CHANNEL0=channel you want
@@ -18,7 +18,7 @@ CHANNEL1=second channel you want
 ## running
 ---
 
-```
+```bash
 npm i
 
 npm run build
