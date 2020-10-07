@@ -1,8 +1,7 @@
 const request = require('request');
 
-let url = 'https://beginworld.exchange/db/rap_sheet.json';
-
-let options = {json: true};
+const url = 'https://beginworld.exchange/db/rap_sheet.json';
+const options = {json: true};
 
 const feature = (client, channel) => {
     request(url, options, (error, res, body) => {
