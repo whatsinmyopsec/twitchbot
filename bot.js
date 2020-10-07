@@ -3,6 +3,7 @@ const feature = require('./criminal');
 const readline = require('readline');
 const cc = require('cli-color');
 const sudo = require('./sudo');
+const keep_alive = require('./keep_alive.js');
 
 let mechannel = '';
 client.connect();
