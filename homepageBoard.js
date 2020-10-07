@@ -3,7 +3,7 @@ const request = require('request');
 const url = 'https://mygeoangelfirespace.city/db/css_votes.json';
 const options = {json: true};
 
-const homepage = (client, channel) => {
+const cssTop = (client, channel) => {
     request(url, options, (error, res, body) => {
         if (error) {
             return console.log(error);
@@ -19,17 +19,17 @@ const homepage = (client, channel) => {
                     return Object.assign(voteCounts, {[contestantName]: voteCount});
                 }, {});
 
-            const [ContestantName, voteCount] = Object.keys(voteCounts)
+            const [bestContestantName, bestVoteCount] = Object.keys(voteCounts)
                 .map((contestantName) => [contestantName, voteCounts[contestantName]])
                 .reduce(
                     (
-                        [ContestantName, voteCount],
+                        [bestContestantName, bestVoteCount],
                         [contestantName, voteCount]
                     ) => {
-                        if (voteCount < voteCount) {
+                        if (bestVoteCount < voteCount) {
                             return [contestantName, voteCount];
                         } else {
-                            return [ContestantName, voteCount];
+                            return [bestContestantName, bestVoteCount];
                         }
                     },
                     ['nobody', 0]
@@ -37,11 +37,11 @@ const homepage = (client, channel) => {
 
             client.say(
                 channel,
-                `${ContestantName} owns the homepage with ${voteCount} votes
-                !css <link to custom css to update your css>`
+                `${bestContestantName} owns the homepage with ${bestVoteCount} votes`
             );
         }
+        client.say(channel, `!bestcss @user to change this`)
     });
 };
 
-module.exports = feature;
+module.exports = cssTop;

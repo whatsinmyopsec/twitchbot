@@ -3,6 +3,7 @@ const feature = require('./criminal');
 const readline = require('readline');
 const cc = require('cli-color');
 const sudo = require('./sudo');
+const cssTop = require('./homepageBoard');
 const keep_alive = require('./keep_alive.js');
 
 let mechannel = '';
@@ -64,6 +65,9 @@ client.on('message', (channel, tags, message, self) => {
     }
     if (message.includes('!!worst_criminal')) {
         feature(client, channel);
+    }
+    if (message.includes('!!cssTop')) {
+        cssTop(client, channel);
     }
     if (message.includes('!!sudo getinfo')) {
         sudo(client, channel, message);
