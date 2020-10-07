@@ -3,7 +3,7 @@
 [![Run on Repl.it](https://repl.it/badge/github/whatsinmyopsec/twitchbot)](https://repl.it/github/whatsinmyopsec/twitchbot)  
 <img src="https://badges.pufler.dev/visits/whatsinmyopsec/twitchbot">  
   
-  This is a Twitch bot for [twitch.tvbeginbot](https://twitch.tv/beginbot). If you have any Questions regarding this Project feel free to ask.
+  This is a Twitch bot for [twitch.tv/beginbot](https://twitch.tv/beginbot). If you have any Questions regarding this Project feel free to ask.
   You found a Bug? Please create an Issue.
   
 ---  
