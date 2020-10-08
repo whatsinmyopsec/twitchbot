@@ -13,7 +13,6 @@ rp(url)
       let output = `The homepage is owned by ${winner}`
             
       client.say(channel, output);
-      
     }
   })
   .catch(function(err){
