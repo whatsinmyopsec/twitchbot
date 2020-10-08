@@ -13,7 +13,7 @@ rp(url)
       let output = `The homepage is owned by ${winner}`
             
       client.say(channel, output);
-      client.say(channel, `To vote for a different homepage do !bestcss @name`)
+      
     }
   })
   .catch(function(err){
