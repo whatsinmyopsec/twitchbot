@@ -1,47 +1,23 @@
-const request = require('request');
-
-const url = 'https://mygeoangelfirespace.city/db/css_votes.json';
-const options = {json: true};
+const rp = require('request-promise');
+const $ = require('cheerio');
+const url = 'https://mygeoangelfirespace.city/';
 
 const cssTop = (client, channel) => {
-    request(url, options, (error, res, body) => {
-        if (error) {
-            return console.log(error);
-        }
-
-        if (!error && res.statusCode === 200) {
-            const voteCounts = Object.values(body.css_votes)
-                .map((contestants) => contestants.candidate)
-                .reduce((voteCounts, contestantName) => {
-                    const voteCount = voteCounts[contestantName]
-                        ? voteCounts[contestantName] + 1
-                        : 1;
-                    return Object.assign(voteCounts, {[contestantName]: voteCount});
-                }, {});
-
-            const [bestContestantName, bestVoteCount] = Object.keys(voteCounts)
-                .map((contestantName) => [contestantName, voteCounts[contestantName]])
-                .reduce(
-                    (
-                        [bestContestantName, bestVoteCount],
-                        [contestantName, voteCount]
-                    ) => {
-                        if (bestVoteCount < voteCount) {
-                            return [contestantName, voteCount];
-                        } else {
-                            return [bestContestantName, bestVoteCount];
-                        }
-                    },
-                    ['nobody', 0]
-                );
-
-            client.say(
-                channel,
-                `${bestContestantName} owns the homepage with ${bestVoteCount} votes`
-            );
-        }
-        client.say(channel, `!bestcss @user to change this`)
-    });
+rp(url)
+  .then(function(html){
+    //success!
+    for (let i = 4; i < 5; i++) {
+      let n = $('a', html)[i].children[0].data;
+      let sArray = n.split(" ");
+      let winner = sArray[3]
+      let output = `The homepage is owned by ${winner}`
+            
+      client.say(channel, output);
+      client.say(channel, `To vote for a different homepage do !bestcss @name`)
+    }
+  })
+  .catch(function(err){
+    //handle error
+  });
 };
-
 module.exports = cssTop;
