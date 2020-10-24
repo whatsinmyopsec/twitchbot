@@ -4,9 +4,10 @@ const readline = require('readline');
 const cc = require('cli-color');
 const sudo = require('./sudo');
 const cssTop = require('./homepageBoard');
-const keep_alive = require('./keep_alive.js');
 const time = require('./time');
 const random = require('./random');
+const keep_alive = require('./keep_alive.js');
+
 
 let mechannel = '';
 client.connect();
