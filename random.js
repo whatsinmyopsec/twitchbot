@@ -1,3 +1,3 @@
-module.exports = () => {
-const b = () => Math.floor(Math.random() * 8000) + 4000
+module.exports = (min,max) => {
+return Math.floor(Math.random() * (max - min) + min);
 }
