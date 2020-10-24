@@ -7,3 +7,4 @@ node_modules/
 
 # For PHPStorm
 .idea/*
+test.js

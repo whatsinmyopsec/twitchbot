@@ -6,15 +6,13 @@ const cssTop = (client, channel) => {
 rp(url)
   .then(function(html){
     //success!
-    for (let i = 4; i < 5; i++) {
-      let n = $('a', html)[i].children[0].data;
+      let n = $('a', html)[4].children[0].data;
       let sArray = n.split(" ");
       let winner = sArray[3]
-      let output = `The homepage is owned by ${winner}`
-            
+      let output = `The homepage is owned by ${winner}`   
       client.say(channel, output);
     }
-  })
+  )
   .catch(function(err){
     //handle error
   });
