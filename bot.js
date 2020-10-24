@@ -5,6 +5,8 @@ const cc = require('cli-color');
 const sudo = require('./sudo');
 const cssTop = require('./homepageBoard');
 const keep_alive = require('./keep_alive.js');
+const time = require('./time');
+const random = require('./random');
 
 let mechannel = '';
 client.connect();
@@ -25,6 +27,7 @@ client.on('message', (channel, tags, message, self) => {
 
     if (self) return;
     if (message === 'CoolCat CoolCat CoolCat' && username === 'beginbotbot') {
+        time(random())
         client.say(channel, `!props`);
     }
     if (message === '!!p' && username === me) {
