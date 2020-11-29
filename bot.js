@@ -32,7 +32,7 @@ client.on('message', (channel, tags, message, self) => {
         client.say(channel, `!props`);
     }
     if (message === '!!p' && username === me) {
-        client.say(channel, `!props`);
+        client.say(channel, `!props all`);
     }
     if (message.toLowerCase() === '!!d' && username === me) {
         client.say(channel, `!donate @${username}`);
