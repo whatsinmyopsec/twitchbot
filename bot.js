@@ -27,7 +27,7 @@ client.on('message', (channel, tags, message, self) => {
 
 
     if (self) return;
-    if (message === 'CoolCat CoolCat CoolCat' && username === 'beginbotbot') {
+    if (message === 'GlitchCat CoolCat CoolCat GlitchCat Mana Replenished GlitchCat CoolCat CoolCat GlitchCat' && username === 'beginbotbot') {
         time(random(4000,9699))
         client.say(channel, `!props`);
     }
