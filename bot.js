@@ -27,10 +27,10 @@ client.on('message', (channel, tags, message, self) => {
 
 
     if (self) return;
-    if (message === 'GlitchCat CoolCat CoolCat GlitchCat Mana Replenished GlitchCat CoolCat CoolCat GlitchCat' && username === 'beginbotbot') {
+    /*if (message === 'GlitchCat CoolCat CoolCat GlitchCat Mana Replenished GlitchCat CoolCat CoolCat GlitchCat' && username === 'beginbotbot') {
         time(random(4000,9699))
         client.say(channel, `!props`);
-    }
+    }*/
     if (message === '!!p' && username === me) {
         client.say(channel, `!props all`);
     }
