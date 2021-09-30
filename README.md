@@ -12,7 +12,7 @@ Little guide on how to make it work.
 
 1. Run this command `cp .env.example .env` or by simple rename that `.env.example` to `.env`
   
-2. Go to [tmi twitch site](https://twitchapps.com/tmi/).
+2. Go to the api [tmi twitch site](https://twitchapps.com/tmi/).
 
 3. Copy your Bot OAuth Token from twitch tmi [website](https://twitchapps.com/tmi/) and paste it into the "**Password**" variable.
 
@@ -25,7 +25,7 @@ CHANNEL1="Twitch channel name 2"
 ```  
   
 4. Make sure to install **npm** with these Commands:
-```bash
+```
 npm i
 npm run build
 ```
