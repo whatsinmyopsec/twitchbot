@@ -1,4 +1,4 @@
 module.exports = (ms) => {
-  const end = Date.now() + ms;
-  while (end > Date.now()) {}
+  const e = Date.now() + ms;
+  while (e > Date.now()) {}
 }
