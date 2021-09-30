@@ -1,7 +1,7 @@
 let client = require('./client');
 const feature = require('./criminal');
 const readline = require('readline');
-const cc = require('cli-color');
+const chalk = require('chalk');
 const sudo = require('./sudo');
 const cssTop = require('./homepageBoard');
 const time = require('./time');
@@ -18,11 +18,11 @@ client.on('message', (channel, tags, message, self) => {
     mechannel = channel;
     let {username, mod} = tags;
     if (tags === mod) {
-        console.log(cc.red(`${username}:`) + cc.white(` ${message}`));
+        console.log(chalk.red(`${username}:`) + chalk.white(` ${message}`));
     } else if (username === me) {
-        console.log(cc.yellow(`${username}:`) + cc.white(` ${message}`));
+        console.log(chalk.yellow(`${username}:`) + chalk.white(` ${message}`));
     } else {
-        console.log(cc.green(`${username}:`) + cc.white(` ${message}`));
+        console.log(chalk.green(`${username}:`) + chalk.white(` ${message}`));
     }
 
 
