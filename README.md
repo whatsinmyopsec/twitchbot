@@ -19,7 +19,7 @@ Little guide on how to make it work.
 ### Example:
 ```md  
 USERNAME="Botname"  
-PASSWORD="NDgyMjM0ODU1MzQygG1xAM1Mzcw.W37ENQ.SxEyK0451hK-lMaYDT-wEHdc"  
+PASSWORD="OAuth Token"  
 CHANNEL0="Twitch channel name 1"  
 CHANNEL1="Twitch channel name 2"
 ```  
@@ -29,6 +29,13 @@ CHANNEL1="Twitch channel name 2"
 npm i
 npm run build
 ```
-
+---
 ### Gratz!
-Your Bot is now ready to run.
+The Bot is now ready to run.
+
+### Features wanted
+---
+To add a feature clone my repo and make a new branch `git -b feature`
+
+Try to follow how I have structured the project as a new feature is in its own file then called in `bot.js`
+
