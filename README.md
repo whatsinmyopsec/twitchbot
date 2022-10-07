@@ -21,7 +21,6 @@ Little guide on how to make it work.
 USERNAME="Botname"  
 PASSWORD="OAuth Token"  
 CHANNEL0="Twitch channel name 1"  
-CHANNEL1="Twitch channel name 2"
 ```  
   
 4. Make sure to install **npm** with these Commands:
