@@ -10,26 +10,26 @@ const feature = (client, channel) => {
         }
 
         if (!error && res.statusCode === 200) {
-            const crimeCounts = Object.values(body.rap_sheet)
-                .map((crime) => crime.user)
-                .reduce((crimeCounts, criminalName) => {
-                    const crimeCount = crimeCounts[criminalName]
-                        ? crimeCounts[criminalName] + 1
+            const offenceCounts = Object.values(body.rap_sheet)
+                .map((offence) => offence.user)
+                .reduce((offenceCounts, offenderName) => {
+                    const offenceCount = offenceCounts[offenderName]
+                        ? offenceCounts[offenderName] + 1
                         : 1;
-                    return Object.assign(crimeCounts, {[criminalName]: crimeCount});
+                    return Object.assign(offenceCounts, {[offenderName]: offenceCount});
                 }, {});
 
-            const [worstCriminalName, worstCrimeCount] = Object.keys(crimeCounts)
-                .map((criminalName) => [criminalName, crimeCounts[criminalName]])
+            const [worstOffenderName, worstOffenceCount] = Object.keys(offenceCounts)
+                .map((offenderName) => [offenderName, offenceCounts[offenderName]])
                 .reduce(
                     (
-                        [worstCriminalName, worstCrimeCount],
-                        [criminalName, crimeCount]
+                        [worstOffenderName, worstOffenceCount],
+                        [offenderName, offenceCount]
                     ) => {
-                        if (worstCrimeCount < crimeCount) {
-                            return [criminalName, crimeCount];
+                        if (worstOffenceCount < offenceCount) {
+                            return [offenderName, offenceCount];
                         } else {
-                            return [worstCriminalName, worstCrimeCount];
+                            return [worstOffenderName, worstOffenceCount];
                         }
                     },
                     ['nobody', 0]
@@ -37,7 +37,7 @@ const feature = (client, channel) => {
 
             client.say(
                 channel,
-                `Biggest Criminal User: ${worstCriminalName} with ${worstCrimeCount} crimes`
+                `Biggest Offender User: ${worstOffenderlName} with ${worstOffenceCount} offences`
             );
         }
     });
